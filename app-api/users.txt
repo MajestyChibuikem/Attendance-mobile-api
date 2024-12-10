@@ -1,0 +1,7 @@
+[
+    {
+        "username": "newuser",
+        "password": "scrypt:32768:8:1$6ZDtby6H8GCIaxwY$2fd657080f1d6b0cacb47212f51e0f119b2f4498439a5cc40aa1211c2b287cf52205d40da5b19f9382d19be382ae7bf55f621f974238738d7f74d030512b10d5",
+        "device_key": "device123"
+    }
+]
