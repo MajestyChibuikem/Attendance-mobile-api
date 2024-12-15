@@ -7,6 +7,9 @@ from datetime import date, datetime
 ATTENDANCE_FILE = 'attendance.txt'
 
 # Helper functions for file handling
+"""
+    method to open up the file and also checks if file is present
+"""
 def load_attendance():
     try:
         with open(ATTENDANCE_FILE, 'r') as file:
@@ -14,6 +17,9 @@ def load_attendance():
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
+"""
+    this method saves the user details into the file
+"""
 def save_attendance(records):
     with open(ATTENDANCE_FILE, 'w') as file:
         json.dump(records, file, indent=4)
