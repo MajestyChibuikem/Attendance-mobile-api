@@ -1,0 +1,115 @@
+# Flask Attendance Tracking API
+
+## Project Overview
+A robust Flask-based API for user authentication and attendance management, featuring secure user registration, JWT-based authentication, and attendance tracking.
+
+## Features
+- User Registration
+- Secure Authentication
+- JWT Token Management
+- Attendance Marking
+- Attendance Record Retrieval
+
+## Prerequisites
+- Python 3.8+
+- Flask
+- Flask-JWT-Extended
+
+## Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://your-repository-url.git
+cd attendance-tracking-api
+```
+
+### 2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`, the coding was done on a linux machine
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## Configuration
+
+### Environment Variables
+Create a `.env` file in the project root with the following:
+```
+JWT_SECRET_KEY=your_very_secret_key
+DEBUG=True
+```
+
+## Running the Application
+```bash
+python app.py
+```
+
+## API Endpoints
+
+### Authentication
+- `POST /auth/login`: User login
+- `POST /auth/register`: User registration
+- `POST /auth/refresh`: Refresh access token
+
+### Attendance
+- `POST /attendance/mark`: Log attendance
+- `GET /attendance/records`: Retrieve attendance records
+
+### User Management
+- `GET /users/list`: List all users
+- `DELETE /users/delete`: Delete a user
+
+## Testing
+
+### Run Unit Tests
+```bash
+python -m unittest discover tests
+```
+
+## Project Structure
+```
+attendance-tracking-api/
+│
+├── app.py                 # Main application entry point
+├── routes/
+│   ├── __init__.py        # Route registration
+│   ├── auth.py            # Authentication routes
+│   ├── users.py           # User management routes
+│   └── attendance.py      # Attendance tracking routes
+│
+├── tests/
+│   └── test_flask_api.py  # Comprehensive unit tests
+│
+├── requirements.txt       # Project dependencies
+└── .env                   # Environment configuration
+```
+
+## Security Features
+- Password hashing
+- JWT-based authentication
+- Token refresh mechanism
+- Input validation
+
+## Contribution Guidelines
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## Planned Improvements
+- Database integration
+- Enhanced logging
+- More comprehensive error handling
+- Rate limiting
+
+## License
+[MIT]
+
+## Contact
+[majestychibuikem@gmail.com]
+```
